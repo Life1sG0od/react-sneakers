@@ -3,6 +3,7 @@ body {
   color: #000;
   font-family: 'Inter', sans-serif;
 }
+
 * {
   list-style: none;
   padding: 0;
@@ -11,9 +12,15 @@ body {
   font-family: inherit;
   border: none;
 }
-input:focus-visible{
+
+a {
+  text-decoration: none;
+}
+
+input:focus-visible {
   outline: none;
 }
+
 .wrapper {
   margin: 0 auto;
   max-width: 1080px;
@@ -24,67 +31,86 @@ input:focus-visible{
   background-color: #fff;
 
 }
+
 .App {
   font-size: 32px;
 }
+
 .header {
   padding: 46px 60px;
   border: 1px solid #EAEAEA;
   display: flex;
   justify-content: space-between;
 }
+
 .headerLeft {
   display: flex;
   align-items: center;
   column-gap: 16px;
 }
+
 .headerLogo {
   width: 40px;
   height: 40px;
 }
+
 .headerName {
+
   & p {
+    text-decoration: none;
     font-size: 20px;
     line-height: 24px;
     font-weight: 700;
     text-transform: uppercase;
+    color: #000;
   }
+
   & span {
+    text-decoration: none;
     font-size: 14px;
     line-height: 17px;
     color: #9D9D9D;
   }
 }
+
 .headerRight {
-    display: flex; 
-    gap: 30px;
-    align-items: center;
-    & svg {
-      display: flex;
-    }
+  display: flex;
+  gap: 30px;
+  align-items: center;
+
+  & svg {
+    display: flex;
+  }
 }
+
 .headerCart {
   display: flex;
   gap: 10px;
+  cursor: pointer;
+
   & span {
     font-size: 14px;
     line-height: 17px;
     color: #5C5C5C;
   }
 }
-///Content
+
+//Content
 .content {
   padding: 30px 60px;
 }
+
 .contentTop {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .contentTitle {
   font-size: 32px;
   line-height: 39px;
 }
+
 .contentSearch {
   border: 1px solid #F3F3F3;
   border-radius: 10px;
@@ -94,203 +120,30 @@ input:focus-visible{
   line-height: 17px;
   display: flex;
   align-items: center;
+
+  & .clear {
+    position: relative;
+    right: 5px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    margin-right: 0;
+
+  }
+
   & img {
     margin-right: 14px;
   }
 }
-//Skneakers card 
+
+// Skneakers card 
 .skeakersCard {
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
   padding: 30px 0px;
-}
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  row-gap: 14px;
-  flex-basis: 210px;
-  border: 1px solid #F3F3F3;
-  border-radius: 40px;
-  padding: 25px 30px 35px;
-  justify-content: center;
-  transition: transform .3s, box-shadow .3s ease-in-out;
-  @media (hover: hover) {
-    &:hover {
-      border: 1px solid #F8F8F8;
-      box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.05);
-      transform: translateY(-5px);
-    }
-  }
-  & img {
-    width: 132px;
-    height: 112px;
-  }
-  & p {
-    font-size: 14px;
-    line-height: 17px;
-  }
-}
-.cardFavorite {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  cursor: pointer;
-  & img {
-    width: 32px;
-    height: 32px;
-  }
-}
-.cardPrice {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  & p {
-    font-weight: 500;
-    font-size: 11px;
-    line-height: 13px;
-    text-transform: uppercase;
-    color: #BDBDBD;
-    margin-bottom: 2px;
-  }
-  & span {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
-    color: #000000;
-  }
-  & img {
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-  }
-}
 
-//RightSide
-.rightSide {
-  display: none;
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
- 
-}
-.rightSideTitle {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 29px
-}
-.rightSideBlock {
-  width: 385px;
-  position: absolute;
-  right: 0;
-  height: 100%;
-  background-color: #fff;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  flex: auto;
-
-}
-.rightSideItems {
-  padding: 30px 0px;
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
-  margin: 20px 0px;
-  &::-webkit-scrollbar {
-    width: 5px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: #888;
-    
-  }
-  &::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-}
-.SideCard {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  line-height: 17px;
-  border: 1px solid #F3F3F3;
-  border-radius: 20px;
-  padding: 30px 20px;
-  & p {
-    margin-bottom: 8px;
-  }
-}
-.SideSneakers {
-  width: 70px;
-  height: 70px;
-  margin-right: 21px;
-}
-.SideDelete {
-  margin-left: 12px;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-  opacity: 0.5;
-  @media (hover: hover) {
-    &:hover {
-      opacity: 1;
-    }
-  }
-}
-.rightSideBottom {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  & div {
-    display: flex;
-    font-size: 16px;
-    line-height: 19px;
-    align-items: flex-end;
-    & p {
-      padding-right: 5px;
-    }
-    & b {
-      padding-left: 5px;
-    }
-
-    & span {
-      display: flex;
-      height: 1px;
-      flex: 1;
-      text-align: end;
-      align-items: flex-start;
-      border-bottom: 1px dashed #DFDFDF;
-      padding: 0px 5px;
-    }
-  }
-
-}
-.rightSideButton {
-  background-color: #9DD558;
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 55px;
-  width: 100%;
-  color: #fff;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 19px;
-  cursor: pointer;
-  & img {
-    position: relative;
-    right: -40px;
-    width: 13px;
-    height: 12px;
-
+  @media (max-width: 991px) {
+    gap: 30px;
   }
 }
